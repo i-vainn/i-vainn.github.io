@@ -1,12 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Webpage</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ivan Moshkov's Resume</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
+
 <body>
-    <h1>Welcome to my personal web-page!</h1>
+  <div class="container">
+    <header>
+      <h1>Ivan Moshkov</h1>
+      <p>+374 (945) 35-095 | <a href="mailto:ivnmoshkov@gmail.com">ivnmoshkov@gmail.com</a></p>
+      <p>
+        <a href="https://github.com/ivan7022" target="_blank"><i class="fab fa-github"></i> github.com/i-vainn</a> |
+        <a href="https://www.linkedin.com/in/i-vainn" target="_blank"><i class="fab fa-linkedin"></i> linkedin/i-vainn</a>
+      </p>
+    </header>
+
+    <main>
+      <section class="education">
+        <h2>Education</h2>
+        <div class="item">
+          <h3><a href="https://www.hse.ru/en/" target="_blank">National Research University Higher School of Economics</a></h3>
+          <p>2019 - Present | BSc in Applied Mathematics and Computer Science</p>
+          <p>GPA: 8.46/10</p>
+          <p>Relevant courses: Machine Learning, Deep Learning, Deep Learning for Audio Processing, Large Scale ML, Efficient DL Systems, Time Series Modeling, Natural Language Processing, Advanced Algorithms, Optimization</p>
+        </div>
+      </section>
+
+      <section class="work-experience">
+        <h2>Work Experience</h2>
+        <div class="item">
+          <h3><a href="https://nvidia.com/" target="_blank">NVIDIA</a> - Research Engineer Intern</h3>
+          <p>Feb 2023 - Present</p>
+          <ul>
+            <li>Developing ASR and NLP models for open-source NeMo framework.</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h3><a href="https://ya.ru/" target="_blank">Yandex</a> - Research Engineer Intern</h3>
+          <p>Aug 2022 - Feb 2023</p>
+          <ul>
+            <li>Conducted experiments with Active Learning on large LM distributed training using model-, data-parallel strategies. Achieved reduction of labeled data amount by 2 times to achieve a given metric for imbalanced setting.</li>
+            <li>Measured host communication and batch mismatches delays during Transformer training using torch profiling, which helped to speed up training by 50%.</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h3><a href="https://sberdevices.ru/" target="_blank">Sber Devices</a> - Research Engineer Intern</h3>
+          <p>Dec 2021 – Jun 2022</p>
+          <ul>
+            <li>Reproduced experiments from research paper on Speech Recognition using PyTorch and NeMo. Optimized CTC-loss function computation using Finite State Transducers Python implementation. Decreased memory usage by 2 times compared to PyTorch implementation.</li>
+            <li>Optimized batch packing for data-parallel model training on the 8 A100 GPU cluster. As a result, I achieved 12% training time reduction.</li>
+          </ul>
+        </div>
+        <div class="item">
+            <h3><a href="https://ya.ru/" target="_blank">Yandex</a> - Software Engineer Intern</h3>
+            <p>Feb 2021 – Jul 2021</p>
+            <ul>
+            <li>Integrated 2 new features into The Search Ranking Algorithm using C++.</li>
+            <li>Automated the process of launching and displaying experiments. Resulted in saving 80% of developer's time. Used Python and Map-Reduce API.</li>
+            <li>Implemented production DCG-over-clicks metric computation. Launched several experiments improving it by 2% with gradient boosting.</li>
+            </ul>
+        </div>
+    </section>
+    <section class="projects">
+        <h2>Projects</h2>
+        <div class="item">
+          <h3><a href="https://github.com/ivan7022/MakeUHappyChatBot" target="_blank">Conversational Chatbot</a></h3>
+          <p>Python, PyTorch, Transformers, HNSW</p>
+          <ul>
+            <li>Group project. Bot supports conversations on general topics. Solution based on ruGPT-3 and BERT models.</li>
+            <li>Built latent space similarity search using approximate nearest neighbors computation. It reduces toxicity of chatbot answers while working 20 times faster than the naive approach.</li>
+            <li>Tested system's performance. Chatbot was able to communicate with more than 30 people concurrently running on a single 12 Gb GPU.</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h3><a href="https://locator.mos.ru/" target="_blank">Locator</a></h3>
+          <p>Python, Machine Learning tools</p>
+          <ul>
+            <li>Group project. Helps new businesses find optimal location based on the open city data.</li>
+            <li>Launched more than 20 experiments searching for optimal ML model and feature combination. Achieved 40% loss reduction compared to the baseline.</li>
+            <li>Implemented data processing and feature extraction. Vectorized computations using numpy making them 10 times faster.</li>
+          </ul>
+        </div>
+      </section>
+    
+      <section class="skills">
+        <h2>Technical Skills</h2>
+        <ul>
+          <li><strong>Programming Languages:</strong> Python, C++, SQL</li>
+          <li><strong>Frameworks & Libraries:</strong> PyTorch, Huggingface & Transformers, NeMo, sklearn, numpy, pandas</li>
+          <li><strong>Software & Tools:</strong> Git, Linux, Docker, Weights & Biases, MapReduce, Hadoop, Spark</li>
+        </ul>
+      </section>
+    
+      <section class="achievements">
+        <h2>Other Activities</h2>
+        <ul>
+          <li>1-st place of 81 participants at the course Kaggle competition on X-Ray image classification. (2022)</li>
+          <li>12-th place of 323 participants at Kaggle-like competition on text classification. (2021)</li>
+          <li>1-st place of 20 teams at 'Fear and loathing in Digital Humanities' hackathon. (2021)</li>
+          <li>2-nd place of 30 teams at Bigtarget hackathon with uplift ML model. (2020)</li>
+          <li>Prize-winner: 84-th place of 4700 participants at national math olympiad Vyschaya Proba. (2019)</li>
+          <li>Volunteering: Mentoring Junior Group of 30 students at the University.</li>
+        </ul>
+      </section>
+    </main>
+          
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="main.js"></script>
 </html>
